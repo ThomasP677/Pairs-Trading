@@ -11,8 +11,8 @@ def compute_range(nums):
 
 # Function to compute Interquartile Range (IQR)
 def compute_iqr(nums):
-    q100, q25 = np.percentile(nums, [100, 25])
-    return q100 - q25
+    q75, q25 = np.percentile(nums, [75, 25])
+    return q75 - q25
 
 
 # Function to compute correlation
@@ -74,7 +74,7 @@ def compute_std_dev(nums):
 def main():
     ticker = ["DAL", "AAL"]  # List of tickers to analyze
     ticker1 = "DAL"  # Delta Airlines
-    ticker2 = "AAL"  # American Airlines 
+    ticker2 = "AAL"  # American Airlines
     start_date = "2022-12-31"
     end_date = "2023-12-30"
 
@@ -90,13 +90,13 @@ def main():
     cointegration = compute_cointegration(data1, data2)
 
     # Compute range and IQR
-    close_prices_AMD = data1["Close"]
-    range_val1 = compute_range(close_prices_AMD)
-    iqr_val1 = compute_iqr(close_prices_AMD)
+    close_prices_DAL = data1["Close"]
+    range_val1 = compute_range(close_prices_DAL)
+    iqr_val1 = compute_iqr(close_prices_AAL)
 
-    close_prices_NVDA = data2["Close"]
-    range_val2 = compute_range(close_prices_NVDA)
-    iqr_val2 = compute_iqr(close_prices_NVDA)
+    close_prices_AAL = data2["Close"]
+    range_val2 = compute_range(close_prices_DAL)
+    iqr_val2 = compute_iqr(close_prices_AAL)
 
     # Compare the differences between the two stocks
     print("\nComparing the differences between DAL and AAL:")
