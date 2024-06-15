@@ -92,10 +92,10 @@ def main():
     # Compute range and IQR
     close_prices_DAL = data1["Close"]
     range_val1 = compute_range(close_prices_DAL)
-    iqr_val1 = compute_iqr(close_prices_AAL)
+    iqr_val1 = compute_iqr(close_prices_DAL)
 
     close_prices_AAL = data2["Close"]
-    range_val2 = compute_range(close_prices_DAL)
+    range_val2 = compute_range(close_prices_AAL)
     iqr_val2 = compute_iqr(close_prices_AAL)
 
     # Compare the differences between the two stocks
