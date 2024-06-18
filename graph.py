@@ -20,6 +20,8 @@ def graph_stock_data(tickers, start_date, end_date, interval='1d'):
             plt.plot(combined[ticker], label=ticker)
 
         plt.legend(loc="upper right")
+        plt.title(tickers[0] + " vs " + tickers[1])
+
         plt.show()
 
     except Exception as e:
