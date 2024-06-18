@@ -21,7 +21,8 @@ def graph_stock_data(tickers, start_date, end_date, interval='1d'):
 
         plt.legend(loc="upper right")
         plt.title(tickers[0] + " vs " + tickers[1])
-
+        plt.xlabel("closing prices")
+        plt.ylabel("Years")
         plt.show()
 
     except Exception as e:
