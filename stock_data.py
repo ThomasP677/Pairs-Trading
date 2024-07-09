@@ -4,6 +4,7 @@ import statsmodels.api as sm
 import matplotlib.pyplot as plt
 from statsmodels.tsa.stattools import adfuller
 import pandas as pd
+from graph import graph_stock_data
 
 
 # Function to Compute Range
@@ -114,9 +115,8 @@ def main():
     print(f"Standard Deviation Difference: {std_diff:.6f}\n")
 
     # Graph the stock data
-    graph_data = visualize_stock_data(tickers, start_date, end_date)
-    for ticker in tickers:
-        return (graph_data)
+    combined, pct_change, cum_returns = graph_stock_data(tickers, start_date, end_date)
+    return (combined, pct_change, cum_returns)
 
 
 if __name__ == "__main__":

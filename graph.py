@@ -125,8 +125,3 @@ def graph_stock_data(tickers, start_date, end_date, interval='1d'):
         print(f"Error occurred: {e}")
         return None, None, None
 
-# Example usage
-tickers = ['DAL', 'AAL']
-start_date = '2023-01-01'
-end_date = '2023-12-31'
-combined, pct_change, cum_returns = graph_stock_data(tickers, start_date, end_date)
