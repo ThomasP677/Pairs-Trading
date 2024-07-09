@@ -124,4 +124,3 @@ def graph_stock_data(tickers, start_date, end_date, interval='1d'):
     except Exception as e:
         print(f"Error occurred: {e}")
         return None, None, None
-
